@@ -101,7 +101,18 @@
   .title {
     font-size: 2rem;
   }
+  /* .text-container {
+    text-align: justify;
+  } */
+
   .text-container {
     text-align: justify;
+    line-height: 1.6rem;
+    padding: 0.625rem;
   }
+
+  .text-container p {
+      margin-bottom: 0.938rem;
+  }
+
 }
