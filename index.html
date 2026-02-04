@@ -1,110 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/mediaqueries.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Muhammad Mahir | Go • AWS • Terraform</title>
+  <meta
+    name="description"
+    content="Muhammad Mahir — Senior Software Engineer focused on Go, AWS, Terraform, IoT, and EV Charging systems."
+  />
+
+  <!-- Performance: fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/mediaqueries.css" />
 </head>
+
 <body>
-    <nav id="main-nav">
-        <div class="logo">Muhammad Mahir</div>
-        <div>
-          <ul class="navigation">
+  <a class="skip-link" href="#profile">Skip to content</a>
+
+  <header class="site-header">
+    <!-- Desktop Nav -->
+    <nav id="main-nav" aria-label="Primary navigation">
+      <a class="logo logo-link" href="#profile">Muhammad Mahir</a>
+
+      <ul class="navigation">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        🌙
+      </button>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav id="hamburger-nav" aria-label="Mobile navigation">
+      <a class="logo logo-link" href="#profile">Muhammad Mahir</a>
+
+      <div class="hamburger-right">
+        <button class="icon-btn" id="theme-toggle-mobile" type="button" aria-label="Toggle dark mode">
+          🌙
+        </button>
+
+        <div class="hamburger-menu">
+          <button
+            class="hamburger-icon"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul class="menu-links" id="mobile-menu">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
+      </div>
     </nav>
+  </header>
 
-    <nav id="hamburger-nav">
-        <div class="logo">Muhammad Mahir</div>
-        <div class="hamburger-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          </div>
-        </div>
-    </nav>
-
+  <main id="content">
     <section id="profile">
-        <div class="section__pic-container">
-          <img src="./assets/images/my-profile-pic-6.jpeg" alt="Muhammad Mahir's profile picture" />
+      <div class="section__pic-container">
+        <img
+          src="./assets/images/profile-img-2.jpeg"
+          alt="Muhammad Mahir's profile picture"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Muhammad Mahir</h1>
+        <p class="section__text__p2">Go • AWS • Terraform • IoT • Full Stack</p>
+
+        <div class="btn-container">
+          <a
+            href="./assets/Muhammad_Mahir_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-color-2"
+          >
+            Download CV
+          </a>
+
+          <button class="btn btn-color-1" type="button" data-scroll="#contact">
+            Contact Info
+          </button>
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Muhammad Mahir</h1>
-            <p class="section__text__p2">Golang | AWS | Terraform | IoT | Full Stack</p>
-            <div class="btn-container">
-              <!-- <button
-                class="btn btn-color-2"
-                onclick="window.open('./assets/Muhammad_Mahir_Resume.pdf')"
-              >
-                Download CV
-              </button> -->
-              <a
-                href="./assets/Muhammad_Mahir_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-color-2"
-              >
-                Download CV
-              </a>
 
-              <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                Contact Info
-              </button>
-            </div>
-            <div id="socials-container">
-              <a
-                href="https://www.linkedin.com/in/mahir-golang-ev/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="./assets/images/linkedin.png"
-                  alt="My LinkedIn profile"
-                  class="icon"
-                />
-              </a>
+        <div id="socials-container" aria-label="Social links">
+          <a
+            href="https://www.linkedin.com/in/mahir-golang-ev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <img
+              src="./assets/images/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
 
-              <a
-                href="https://github.com/Muhammad-Mahir157"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="./assets/images/github.png"
-                  alt="My GitHub profile"
-                  class="icon"
-                />
-              </a>
-
-            </div>
-          </div>
+          <a
+            href="https://github.com/Muhammad-Mahir157"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <img
+              src="./assets/images/github.png"
+              alt="GitHub icon"
+              class="icon"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </div>
+      </div>
     </section>
 
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
+
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="./assets/images/my-profile-pic-5.jpeg"
+            src="./assets/images/profile-img-1.png"
             alt="Profile picture"
             class="about-pic"
+            loading="lazy"
+            decoding="async"
           />
         </div>
+
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
@@ -112,59 +158,65 @@
                 src="./assets/images/experience.png"
                 alt="Experience icon"
                 class="icon"
+                loading="lazy"
+                decoding="async"
               />
               <h3>Industry Experience</h3>
-              <p>3 years of <br />FullStack & Backend Development</p>
+              <p>3 years of <br />FullStack & Backend Development and additional 2 Years of Freelance Experience</p>
             </div>
+
             <div class="details-container">
               <img
                 src="./assets/images/education.png"
                 alt="Education icon"
                 class="icon"
+                loading="lazy"
+                decoding="async"
               />
               <h3>Education</h3>
-              <p>BSCS (Bachelor of Science in Computer Science)<br /></p>
+              <p>BSCS (Bachelor of Science in Computer Science)</p>
             </div>
           </div>
+
           <div class="text-container">
             <p>
               I'm Mahir, a passionate software engineer dedicated to building scalable and efficient solutions.
               I thrive on transforming complex ideas into intuitive, real-world applications.
               Whether it's architecting backend services, enhancing IoT security, or optimizing cloud deployments,
               I love tackling challenges that push the boundaries of innovation.
-              <br />
             </p>
 
-            <!-- <p>
-              <strong>Technical Skills: </strong>
-              TypeScript | SQL, | .NET core | JavaScript | React | Angular | Node.js
-              <br />
-            </p> -->
-
-            <p>
-              <strong>Domain & Interests: </strong>
-               <p>EV Charging • Industrial IoT • Climate Tech • SaaS • Infrastructure Automation</p>
-              <br />
-            </p>
-              
+            <div class="pill-block">
+              <strong>Domain & Interests</strong>
+              <ul class="pill-list" aria-label="Domains and interests">
+                <li>EV Charging</li>
+                <li>Industrial IoT</li>
+                <li>Climate Tech</li>
+                <li>SaaS</li>
+                <li>Infrastructure Automation</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+
       <img
         src="./assets/images/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
-        onclick="location.href='#experience'"
+        data-scroll="#experience"
+        loading="lazy"
+        decoding="async"
       />
     </section>
 
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
-      <div class="experience-details-container"">
-        <div class="about-containers">
 
-          <!-- NeoCharge Experience -->
+      <!-- FIX: removed stray quote -->
+      <div class="experience-details-container">
+        <div class="about-containers">
           <div class="details-container">
             <h2 class="experience-sub-title">NeoCharge</h2>
             <p class="section__text__p2"><strong>Senior Software Engineer</strong> — Jan 2025 – Present</p>
@@ -177,7 +229,6 @@
             </ul>
           </div>
 
-          <!-- Octopus Digital Experience -->
           <div class="details-container">
             <h2 class="experience-sub-title">Octopus Digital</h2>
             <p class="section__text__p2"><strong>Full Stack Developer</strong> — Apr 2023 – Dec 2024</p>
@@ -188,7 +239,6 @@
             </ul>
           </div>
 
-          <!-- Archtech Consulting Experience -->
           <div class="details-container">
             <h2 class="experience-sub-title">Archtech Consulting (Freelance)</h2>
             <p class="section__text__p2"><strong>Golang Backend Developer</strong> — Apr 2021 – Mar 2023</p>
@@ -199,198 +249,107 @@
               <li>Integrated Prometheus & Grafana for monitoring and alerting dashboards.</li>
             </ul>
           </div>
-
-        </div>  
+        </div>
       </div>
 
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
             <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">     
+            <div class="article-container">
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Angular</h3>
-                  <p>Experienced</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>Angular</h3><p>Experienced</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>React</h3><p>Intermediate</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>HTML</h3><p>Experienced</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>CSS</h3><p>Experienced</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>SASS</h3><p>Intermediate</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>JavaScript</h3><p>Intermediate</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Experienced</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>TypeScript</h3><p>Experienced</p></div>
               </article>
             </div>
           </div>
+
           <div class="details-container">
             <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3> Golang </h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>Go</h3><p>Intermediate</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>.Net Core </h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>.NET Core</h3><p>Intermediate</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL & PostgreSQL</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>SQL & PostgreSQL</h3><p>Intermediate</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Basic</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>Node.js</h3><p>Basic</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Basic</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>Express</h3><p>Basic</p></div>
               </article>
               <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/images/checkmark.png" alt="" class="icon" loading="lazy" decoding="async" />
+                <div><h3>Git</h3><p>Intermediate</p></div>
               </article>
             </div>
           </div>
         </div>
       </div>
+
       <img
         src="./assets/images/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
-        onclick="location.href='#projects'"
+        data-scroll="#projects"
+        loading="lazy"
+        decoding="async"
       />
     </section>
 
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
+
       <div class="experience-details-container">
         <div class="about-containers">
-          <!-- Project 1 Details -->
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/images/job-recommender-system-image2.jpg"
-                alt="Job Recomender System"
+                alt="Job Recommender System"
                 class="project-img"
+                loading="lazy"
+                decoding="async"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Job Recomender system</h2>
+            <h2 class="experience-sub-title project-title">Job Recommender System</h2>
+            <p class="project-desc">Recommends relevant jobs based on user inputs and matching logic.</p>
             <div class="btn-container">
-              <!-- <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Muhammad-Mahir157/Job-Recommender-System'"
-              >
-                Github
-              </button> -->
-               <a
+              <a
                 href="https://github.com/Muhammad-Mahir157/Job-Recommender-System"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -400,18 +359,21 @@
               </a>
             </div>
           </div>
-          <!-- Project 2 Details -->
+
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/images/search-engine-project-image.jpg"
                 alt="Search Engine"
                 class="project-img"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <h2 class="experience-sub-title project-title">Search Engine</h2>
+            <p class="project-desc">Search experience with indexing + ranking for relevant results.</p>
             <div class="btn-container">
-               <a
+              <a
                 href="https://github.com/Muhammad-Mahir157/Search-Engine"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -421,18 +383,21 @@
               </a>
             </div>
           </div>
-          <!-- Project 3 Details -->
+
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/images/HP-model-sequence-project-image2.jpg"
                 alt="HP Model Sequence"
                 class="project-img"
+                loading="lazy"
+                decoding="async"
               />
             </div>
-            <h2 class="experience-sub-title project-title">HP Model Sequence and Score Optimization</h2>
+            <h2 class="experience-sub-title project-title">HP Model Sequence & Score Optimization</h2>
+            <p class="project-desc">Optimization work focused on scoring/sequence improvements.</p>
             <div class="btn-container">
-               <a
+              <a
                 href="https://github.com/Muhammad-Mahir157/HP-Model-Sequence-Scoring-and-Optimization"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -442,16 +407,19 @@
               </a>
             </div>
           </div>
-          <!-- Project 4 Details -->
+
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/images/kanban-board-app-display-Image.jpg"
                 alt="Kanban board image"
                 class="project-img"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <h2 class="experience-sub-title project-title">Kanban Board Application</h2>
+            <p class="project-desc">Task board with columns, drag/drop style workflow, and a live demo.</p>
             <div class="btn-container">
               <a
                 href="https://github.com/Muhammad-Mahir157/Kanban-Board"
@@ -461,7 +429,6 @@
               >
                 Github
               </a>
-
               <a
                 href="https://muhammad-mahir157.github.io/Kanban-Board/"
                 target="_blank"
@@ -472,16 +439,19 @@
               </a>
             </div>
           </div>
-           <!-- Project 5 Details -->
-           <div class="details-container color-container">
+
+          <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/images/heal-labs.jpg"
                 alt="Heal Labs"
                 class="project-img"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <h2 class="experience-sub-title project-title">Heal Labs (In-Progress)</h2>
+            <p class="project-desc">Landing page / early stage work for Heal Labs.</p>
             <div class="btn-container">
               <a
                 href="https://heallabsonline.com/"
@@ -495,57 +465,75 @@
           </div>
         </div>
       </div>
+
       <img
         src="./assets/images/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
-        onclick="location.href='#contact'"
+        data-scroll="#contact"
+        loading="lazy"
+        decoding="async"
       />
     </section>
-    
+
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
+
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
             src="./assets/images/email.png"
             alt="Email icon"
             class="icon contact-icon email-icon"
+            loading="lazy"
+            decoding="async"
           />
           <p><a href="mailto:hmmahir2001@gmail.com">hmmahir2001@gmail.com</a></p>
         </div>
-          <a
-            href="https://www.linkedin.com/in/mahir-golang-ev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="contact-info-container"
-          >
-            <img
-              src="./assets/images/linkedin.png"
-              alt="LinkedIn icon"
-              class="icon contact-icon"
-            />
-            <p>LinkedIn</p>
-          </a>
 
+        <a
+          href="https://www.linkedin.com/in/mahir-golang-ev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-info-container"
+        >
+          <img
+            src="./assets/images/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+            loading="lazy"
+            decoding="async"
+          />
+          <p>LinkedIn</p>
+        </a>
       </div>
     </section>
 
-    <footer>
-      <nav>
-        <div>
-          <ul class="navigation">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 Muhammad Mahir. All Rights Reserved.</p>
-    </footer>
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">
+      ↑
+    </button>
+  </main>
 
-    <script src="./assets/js/script.js"></script>
+  <footer>
+    <nav aria-label="Footer navigation">
+      <ul class="navigation">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <p>Copyright &#169; 2024 Muhammad Mahir. All Rights Reserved.</p>
+  </footer>
+
+  <noscript>
+    <div class="noscript">
+      This site works best with JavaScript enabled (for the mobile menu + theme toggle).
+    </div>
+  </noscript>
+
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
