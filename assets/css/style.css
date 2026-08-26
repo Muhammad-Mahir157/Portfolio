@@ -40,6 +40,8 @@ body {
   font-family: "Poppins", sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -239,6 +241,7 @@ section {
   gap: 3rem;
   align-items: center;
   padding-top: 3rem;
+  min-height: calc(100vh - var(--navh));
 }
 
 .section__pic-container {
@@ -247,7 +250,7 @@ section {
   align-items: center;
 }
 
-.section__pic-container img {
+.profile-pic {
   width: 400px;
   height: 400px;
   object-fit: cover;
@@ -256,8 +259,21 @@ section {
   border: 1px solid var(--border);
 }
 
+.hero-pic {
+  object-position: center 24%;
+}
+
+.about-pic {
+  object-position: center 18%;
+}
+
+.section__pic-container--about {
+  align-self: flex-start;
+}
+
 .section__text {
   text-align: center;
+  max-width: 620px;
 }
 
 .section__text p {
@@ -272,12 +288,14 @@ section {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   color: var(--muted);
+  line-height: 1.5;
 }
 
 .title {
   font-size: 3rem;
   line-height: 1.1;
   margin-bottom: 0.5rem;
+  text-wrap: balance;
 }
 
 #socials-container {
@@ -332,6 +350,10 @@ section {
   position: relative;
 }
 
+#about .section-container {
+  align-items: stretch;
+}
+
 .about-containers {
   display: flex;
   gap: 1.25rem;
@@ -344,12 +366,6 @@ section {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-}
-
-.about-pic {
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
 }
 
 .details-container {
@@ -368,6 +384,7 @@ section {
 
 .text-container p {
   line-height: 1.75rem;
+  max-width: 62ch;
 }
 
 .pill-block {
@@ -520,6 +537,7 @@ article .icon {
 .contact-info-container p {
   font-size: 1.05rem;
   color: inherit;
+  overflow-wrap: anywhere;
 }
 
 .contact-icon {

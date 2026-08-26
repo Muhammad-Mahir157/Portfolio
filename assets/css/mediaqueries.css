@@ -1,6 +1,13 @@
 @media screen and (max-width: 1400px) {
   #profile {
     grid-template-columns: 360px 1fr;
+    min-height: auto;
+    gap: 2.25rem;
+  }
+
+  .profile-pic {
+    width: 360px;
+    height: 360px;
   }
 }
 
@@ -15,16 +22,26 @@
   #profile {
     grid-template-columns: 1fr;
     padding-top: 2rem;
+    text-align: center;
   }
 
-  .section__pic-container img {
+  .profile-pic {
     width: 320px;
     height: 320px;
+  }
+
+  .section__pic-container--about {
+    align-self: center;
   }
 
   .section-container {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
+  }
+
+  .about-details-container {
+    width: 100%;
   }
 
   .arrow {
@@ -33,6 +50,18 @@
 }
 
 @media screen and (max-width: 600px) {
+  section {
+    padding: 3.5rem 1rem;
+  }
+
+  nav {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
   .title {
     font-size: 2.2rem;
   }
@@ -41,10 +70,38 @@
     font-size: 1.1rem;
   }
 
+  .profile-pic {
+    width: min(100%, 292px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: 0;
+  }
+
   .navigation {
     flex-direction: column;
     gap: 0.6rem;
     text-align: center;
+  }
+
+  .about-containers {
+    gap: 1rem;
+  }
+
+  .details-container {
+    padding: 1rem;
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
   }
 
   article {
@@ -57,11 +114,22 @@
   }
 
   .text-container p {
-    text-align: justify;
+    text-align: left;
+  }
+
+  .contact-info-upper-container {
+    padding: 0.6rem;
+    gap: 0.6rem;
   }
 
   .contact-info-container {
     width: 100%;
     justify-content: center;
+    padding: 0.85rem 1rem;
+    border-radius: 1rem;
+  }
+
+  footer {
+    padding-top: 2rem;
   }
 }
